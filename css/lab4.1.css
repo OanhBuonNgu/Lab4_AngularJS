@@ -1,0 +1,20 @@
+.container {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+}
+
+ul {
+    list-style: none;
+}
+
+#photo {
+    width: 400px;
+    height: 300px;
+}
+
+li {
+    color: white;
+    font-size: 16px;
+}

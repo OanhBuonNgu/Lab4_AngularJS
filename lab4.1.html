@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/lab4.1.css">
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myctrl">
+        <!-- Hiển thị thông tin sinh viên -->
+        <div class="container">
+            <img id="photo" src="/images/{{photo}}" alt="" class="img-fluid">
+            <ul>
+                <li>Họ và Tên: {{fullname}}</li>
+                <li>Ngày Sinh: {{birthday}}</li>
+                <li>Giới Tính: {{gender}}</li>
+                <li>Điêm Trung Bình: {{mark}}</li>
+            </ul>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script>
+            const app = angular.module("myApp", []);
+            app.controller("myctrl", function($scope) {
+                // cung cấp thông tin sinh viên
+                $scope.fullname = "Nguyễn Đình Oanh";
+                $scope.birthday = "29-03-2002";
+                $scope.gender = "Nam";
+                $scope.photo = "1.jpg";
+                $scope.mark = 8.5;
+            });
+        </script>
+
+    </div>
+
+</body>
+
+</html>
